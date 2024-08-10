@@ -1,6 +1,6 @@
-# Kwil Node Operator Configuration Guide
+# TSN Node Configuration Guide
 
-This guide outlines essential configurations for Kwil node operators. We'll use `kwil-admin` to generate the initial configuration file.
+This guide outlines essential configurations for TSN Node operators. We'll use `kwil-admin` to generate the initial configuration file.
 
 ## Database Configuration
 
@@ -21,16 +21,25 @@ If using a custom PostgreSQL setup, configure these parameters:
 --app.pg-db-user string   Database user name (default "kwild")
 ```
 
-## Performance Optimization
-
-```
---app.db-read-timeout duration   Database read timeout (recommended: 60s, default: 5s)
--r, --root-dir string            Kwild root directory (default "~/.kwild")
-```
-
-We recommend a 60s timeout due to the potentially long execution time of deeply nested TSN queries. The configuration file will be generated in the specified root directory.
-
 ## Network Configuration
+
+### Genesis File
+
+```
+-g, --genesis string   Path to genesis file
+```
+
+You should use this option to specify the genesis file provided in the `configs/network/<network_name>` directory of the tsn-node-operator repository. This is crucial for joining the correct network.
+
+- The genesis file is mandatory for joining an existing TSN network.
+- It defines the initial state of the blockchain, including initial validators and other network parameters.
+- Using the correct genesis file ensures your node starts with the same state as other nodes in the network.
+
+Example usage:
+
+```bash
+kwil-admin setup peer -g ./configs/network/staging/genesis.json [other options]
+```
 
 ### Listening Addresses
 
@@ -54,10 +63,16 @@ Important:
 ```
 
 Recommendations:
-- Use our provided node list as seeds for initial peer discovery.
-- Set critical nodes as persistent peers for constant connectivity.
+- Use the node list provided in `configs/network/<network_name>/network-nodes.csv` as seeds for initial peer discovery.- Set critical nodes as persistent peers for constant connectivity.
 
 ## Additional Configuration
+
+```
+--app.db-read-timeout duration   Database read timeout (recommended: 60s, default: 5s)
+-r, --root-dir string            Kwild root directory (default "~/.kwild")
+```
+
+We recommend a 60s timeout due to the potentially long execution time of deeply nested TSN queries. The configuration file will be generated in the specified root directory.
 
 For a complete list of options:
 - Refer to the [Kwil documentation](https://docs.kwil.com)
@@ -77,19 +92,11 @@ Replace `[flags]` with the desired configuration options from this guide.
 
 Remember to review and adjust these settings based on your specific requirements and infrastructure.
 
-
-{lets build example
-"KWILD_APP_HOSTNAME=mynode.mycompany.com",
-"KWILD_APP_PG_DB_HOST=kwil-postgres",
-"KWILD_CHAIN_P2P_PERSISTENT_PEERS=825594e3d8abfc91f6e15823d0ef9272a8792f31@mynode.mycompany.com:26656,e4e3883da96d8cc705f477ad7724c7dabaaa11e8@3.129.133.203:26656",
-"KWILD_CHAIN_P2P_EXTERNAL_ADDRESS=http://mynode.mycompany.com:26656",
-"CONFIG_PATH=/root/.kwild",
-}
-
 ## Example Configuration
 
 ```bash
 kwil-admin setup peer \
+    -g ./configs/network/staging/genesis.json \
     --app.pg-db-host node-postgres \
     --app.hostname mynode.mycompany.com \
     --chain.p2p.external-address http://mynode.mycompany.com:26656 \
