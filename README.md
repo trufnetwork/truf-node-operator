@@ -44,7 +44,7 @@ If you prefer a custom PostgreSQL setup, ensure it meets the requirements specif
 Run the TSN binaries to deploy your node:
 
 ```bash
-./.build/kwild --config /path/to/your/config.toml
+./.build/kwild --root-dir /path/to/config/dir
 ```
 
 Ensure your firewall allows incoming connections on the JSON-RPC port (default: 8484) and P2P port (default: 26656).
