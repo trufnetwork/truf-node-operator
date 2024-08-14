@@ -1,6 +1,6 @@
 # TSN Node Operator Guide
 
-This guide will walk you through the process of setting up and running a TSN (Truflation Secure Network) node. By following these steps, you'll be able to deploy a node, optionally become a validator, and contribute to the TSN network.
+This guide will walk you through the process of setting up and running a TSN node. By following these steps, you'll be able to deploy a node, optionally become a validator, and contribute to the TSN network.
 
 ## Prerequisites
 
