@@ -9,30 +9,11 @@ Before you begin, ensure you have the following:
 1. **Kwil-admin**: Used to generate the initial configuration file.
     - Download from the [latest GitHub release](https://github.com/kwilteam/kwil-db/releases)
 
-    <details><summary>Download with github-cli</summary>
-
-    ```bash
-    # archs: linux_amd64, linux_arm64, darwin_amd64, darwin_arm64
-    MY_ARCH=
-    gh release download --repo kwilteam/kwil-db --pattern "kwil-db_*_$MY_ARCH.tar.gz"
-    ```
-    </details>
-
 2. **Docker**: Required for running the PostgreSQL image.
     - Install from [Docker's official website](https://docs.docker.com/get-docker/)
 
 3. **TSN Binaries**: Necessary for node deployment.
     - Download from the [latest GitHub release](https://github.com/truflation/tsn-db/releases)
-
-   <details><summary>Download with github-cli</summary>
-
-    ```bash
-    # gh needs to be authenticated, tsn is private
-    # archs: linux_amd64, linux_arm64, darwin_amd64, darwin_arm64
-    MY_ARCH=
-    gh release download --repo truflation/tsn --pattern "*kwild_$MY_ARCH.tar.gz"
-    ```
-    </details>
 
 ## Setup Steps
 
