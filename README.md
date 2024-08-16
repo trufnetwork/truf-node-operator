@@ -1,6 +1,6 @@
 # TSN Node Operator Guide
 
-This guide will walk you through the process of setting up and running a TSN node. By following these steps, you'll be able to deploy a node, optionally become a validator, and contribute to the TSN network.
+This guide will walk you through the process of setting up and running a Truflation Stream Network (TSN) node. By following these steps, you'll be able to deploy a node, optionally become a validator, and contribute to the TSN.
 
 ## Prerequisites
 
@@ -19,13 +19,19 @@ Before you begin, ensure you have the following:
 
 ### 1. Generate Initial Configuration
 
-Use `kwil-admin` to create your initial configuration file:
+Use `kwil-admin` to create your initial configuration file. 
 
 ```bash
-kwil-admin setup peer [flags]
+kwil-admin setup peer  \
+  -g ./configs/network/staging/genesis.json \
+  --root-dir ./my-peer-config/ \
+  --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656 \
+  --app.hostname mynode.mycompany.com \
+  --chain.p2p.external-address http://mynode.mycompany.com:26656 \
+  --app.db-read-timeout 60s
 ```
 
-For detailed instructions on configuration options, refer to our [Configuration Guide](docs/creating-config.md).
+For detailed instructions on these and other configuration options, refer to our [Configuration Guide](docs/creating-config.md).
 
 ### 2. Set Up PostgreSQL
 
@@ -44,7 +50,7 @@ If you prefer a custom PostgreSQL setup, ensure it meets the requirements specif
 Run the TSN binaries to deploy your node:
 
 ```bash
-kwild --root-dir /path/to/config/dir
+kwild --root-dir ./my-peer-config/
 ```
 
 Ensure your firewall allows incoming connections on the JSON-RPC port (default: 8484) and P2P port (default: 26656).
@@ -93,4 +99,4 @@ When setting up your node, refer to these files for network-specific parameters 
 
 For further assistance, join our [Discord community](https://discord.com/invite/5AMCBYxfW4) or open an issue on our [GitHub repository](https://github.com/truflation/tsn-node-operator/issues).
 
-Welcome to the TSN network! Your participation helps build a more robust and decentralized data infrastructure.
+Welcome to the Truflation Stream Network! Your participation helps build a more robust and decentralized data infrastructure.
