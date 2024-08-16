@@ -11,16 +11,6 @@ docker run -p 5432:5432 --name kwil-postgres -e "POSTGRES_HOST_AUTH_METHOD=trust
     kwildb/postgres:latest
 ```
 
-If using a custom PostgreSQL setup, configure these parameters:
-
-```
---app.pg-db-host string   PostgreSQL host address (default "127.0.0.1")
---app.pg-db-name string   Database name (default "kwild")
---app.pg-db-pass string   Database password
---app.pg-db-port string   Database port (default "5432")
---app.pg-db-user string   Database user name (default "kwild")
-```
-
 ## Network Configuration
 
 ### Genesis File
@@ -38,7 +28,9 @@ You should use this option to specify the genesis file provided in the `configs/
 Example usage:
 
 ```bash
-kwil-admin setup peer -g ./configs/network/staging/genesis.json [other options]
+kwil-admin setup peer -g ./configs/network/staging/genesis.json \
+  --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656 \
+  [other options]
 ```
 
 ### Listening Addresses
@@ -55,7 +47,7 @@ Important:
 - Ensure the P2P external address is reachable by other peers.
 - `hostname` and `p2p.external-address` can be the same or different based on your setup.
 
-## Peer Configuration
+### Peer Configuration
 
 ```
 --chain.p2p.persistent-peers string   Persistent P2P peers
@@ -63,7 +55,21 @@ Important:
 ```
 
 Recommendations:
-- Use the node list provided in `configs/network/<network_name>/network-nodes.csv` as seeds for initial peer discovery.- Set critical nodes as persistent peers for constant connectivity.
+- Set critical nodes as persistent peers for constant connectivity. We recommend that you add our TSN nodes as persistent peers.
+    For example: `--chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656`
+- Use the node list provided in `configs/network/<network_name>/network-nodes.csv` as seeds for initial peer discovery
+
+### Custom Database Configuration
+
+If using a custom PostgreSQL setup, configure these parameters:
+
+```
+--app.pg-db-host string   PostgreSQL host address (default "127.0.0.1")
+--app.pg-db-name string   Database name (default "kwild")
+--app.pg-db-pass string   Database password
+--app.pg-db-port string   Database port (default "5432")
+--app.pg-db-user string   Database user name (default "kwild")
+```
 
 ## Additional Configuration
 
@@ -97,10 +103,9 @@ Remember to review and adjust these settings based on your specific requirements
 ```bash
 kwil-admin setup peer \
     -g ./configs/network/staging/genesis.json \
-    --app.pg-db-host node-postgres \
+    --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656
     --app.hostname mynode.mycompany.com \
     --chain.p2p.external-address http://mynode.mycompany.com:26656 \
-    --chain.p2p.seeds 825594e3d8abfc91f6e15823d0ef9272a8792f31@mynode.mycompany.com:26656,e4e3883da96d8cc705f477ad7724c7dabaaa11e8@3.129.133.203:26656 \
     --root-dir ./tsn-config \
     --app.db-read-timeout 60s
 ```
