@@ -29,7 +29,7 @@ Example usage:
 
 ```bash
 kwil-admin setup peer -g ./configs/network/staging/genesis.json \
-  --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656 \
+  --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.truflation.com:26656 \
   [other options]
 ```
 
@@ -56,7 +56,7 @@ Important:
 
 Recommendations:
 - Set critical nodes as persistent peers for constant connectivity. We recommend that you add our TSN nodes as persistent peers.
-    For example: `--chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656`
+    For example: `--chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.truflation.com:26656`
 - Use the node list provided in `configs/network/<network_name>/network-nodes.csv` as seeds for initial peer discovery
 
 ### Custom Database Configuration
@@ -103,7 +103,7 @@ Remember to review and adjust these settings based on your specific requirements
 ```bash
 kwil-admin setup peer \
     -g ./configs/network/staging/genesis.json \
-    --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.test.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.test.truflation.com:26656
+    --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.truflation.com:26656
     --app.hostname mynode.mycompany.com \
     --chain.p2p.external-address http://mynode.mycompany.com:26656 \
     --root-dir ./tsn-config \
