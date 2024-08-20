@@ -1,4 +1,4 @@
 node_name,owner_title,owner_website,node_pubkey,node_cometbft_id,p2p_rpc_endpoint
-"Truflation Node 01","Truflation","https://truflation.com","4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1","c6d2ea1e573d207cc31b7e17c771ab8ca2091b22","http://staging.node-1.tsn.truflation.com:26656"
-"Truflation Node 02","Truflation","https://truflation.com","0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae","34599966ce4b67628f4cfa99fdca74ea2d039018","http://staging.node-2.tsn.truflation.com:26656"
-"Kwil Node 01","Kwil","https://kwil.com","dc2240baa54023b06a3cfa95a5d0c8fccff6f5cd6b918e91bc9f4788cc3fc2cc","2dbc5348a2d9fab5f914d75c1f59b380c31d3ad5","http://3.92.83.167:26656"
+"Truflation Node 01","Truflation","https://truflation.com","4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1","c6d2ea1e573d207cc31b7e17c771ab8ca2091b22","staging.node-1.tsn.truflation.com:26656"
+"Truflation Node 02","Truflation","https://truflation.com","0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae","34599966ce4b67628f4cfa99fdca74ea2d039018","staging.node-2.tsn.truflation.com:26656"
+"Kwil Node 01","Kwil","https://kwil.com","dc2240baa54023b06a3cfa95a5d0c8fccff6f5cd6b918e91bc9f4788cc3fc2cc","2dbc5348a2d9fab5f914d75c1f59b380c31d3ad5","3.92.83.167:26656"
