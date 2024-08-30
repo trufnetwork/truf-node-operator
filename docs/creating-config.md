@@ -8,6 +8,7 @@ Kwil provides a pre-configured PostgreSQL Docker image for quick setup:
 
 ```bash
 docker run -p 5432:5432 --name kwil-postgres -e "POSTGRES_HOST_AUTH_METHOD=trust" \
+    -v postgres_data:/var/lib/postgresql/data \
     kwildb/postgres:latest
 ```
 

@@ -37,6 +37,7 @@ For a quick setup, run Kwil's pre-configured PostgreSQL Docker image:
 ```bash
 docker run -d -p 5432:5432 --name tsn-postgres \
     -e "POSTGRES_HOST_AUTH_METHOD=trust" \
+    -v postgres_data:/var/lib/postgresql/data \
     kwildb/postgres:latest
 ```
 
