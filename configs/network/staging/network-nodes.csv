@@ -3,4 +3,4 @@ node_name,owner_title,owner_website,node_pubkey,node_cometbft_id,p2p_rpc_endpoin
 "Truflation Node 02","Truflation","https://truflation.com","0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae","34599966ce4b67628f4cfa99fdca74ea2d039018","staging.node-2.tsn.truflation.com:26656"
 "Kwil Node 01","Kwil","https://kwil.com","dc2240baa54023b06a3cfa95a5d0c8fccff6f5cd6b918e91bc9f4788cc3fc2cc","2dbc5348a2d9fab5f914d75c1f59b380c31d3ad5","3.92.83.167:26656"
 "QuantNode 01","QuantNode","https://quantnode.tech","6587ed90eeb025a940119fed727567e7a160fcb37996ec86f13af6097de35bcd","454bf75e0fc899633747356819200f740a42c529","staging-node-1-tsn.quantnode.tech:26656"
-"LinkPool 01","Linkpool","https://linkpool.com","8096bc52f64624a8caef73d4817f1abff8832467075f5134ce28bec134567e4b","9c3ba3d3001ddba3a5f85af76ca59a9ebe852562","p2p.truflation-mainnet.net.linkpool.io:32115"
+"LinkPool 01","Linkpool","https://linkpool.com","8096bc52f64624a8caef73d4817f1abff8832467075f5134ce28bec134567e4b","9c3ba3d3001ddba3a5f85af76ca59a9ebe852562","p2p.truflation-staging.net.linkpool.io:32115"
