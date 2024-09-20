@@ -45,13 +45,25 @@ If you prefer a custom PostgreSQL setup, ensure it meets the requirements specif
 
 ### 3. Deploy TSN Node
 
+#### 3.1. Install PSQL
+
+To be able to Snapshot from the network, you need to have `psql` installed on your machine. You can install it by running:
+
+```bash 
+sudo apt -y install postgresql
+```
+
+#### 3.2. Run TSN Binaries
 Run the TSN binaries to deploy your node:
 
 ```bash
-kwild --root-dir ./my-peer-config/
+kwild --root-dir ./my-peer-config/ --chain.statesync.enable=true --chain.statesync.rpc-servers='http://18.189.163.27:26657'
 ```
 
 Ensure your firewall allows incoming connections on the JSON-RPC port (default: 8484) and P2P port (default: 26656).
+
+The `--chain.statesync.enable` and `--chain.statesync.rpc-servers` flags are optional and only needed if you want to enable state sync on your node.
+It will help your node to sync faster with the network with the snapshot provided by the RPC servers.
 
 ### 4. Become a Validator (Optional)
 
