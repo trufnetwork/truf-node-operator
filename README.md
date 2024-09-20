@@ -57,7 +57,7 @@ sudo apt -y install postgresql
 Run the TSN binaries to deploy your node:
 
 ```bash
-kwild --root-dir ./my-peer-config/ --chain.statesync.enable=true --chain.statesync.rpc-servers='http://staging.node-1.tsn.truflation.com:26657,http://staging.node-2.tsn.truflation.com:26657'
+kwild --root-dir ./my-peer-config/ --chain.statesync.enable=true --chain.statesync.rpc-servers='http://18.189.163.27:26657'
 ```
 
 Ensure your firewall allows incoming connections on the JSON-RPC port (default: 8484) and P2P port (default: 26656).
