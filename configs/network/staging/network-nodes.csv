@@ -5,3 +5,4 @@ node_name,owner_title,owner_website,node_pubkey,node_cometbft_id,p2p_rpc_endpoin
 "QuantNode 01","QuantNode","https://quantnode.tech","6587ed90eeb025a940119fed727567e7a160fcb37996ec86f13af6097de35bcd","454bf75e0fc899633747356819200f740a42c529","staging-node-1-tsn.quantnode.tech:26656"
 "LinkPool 01","Linkpool","https://linkpool.com","8096bc52f64624a8caef73d4817f1abff8832467075f5134ce28bec134567e4b","9c3ba3d3001ddba3a5f85af76ca59a9ebe852562","p2p.truflation-staging.net.linkpool.io:32115"
 "UsherLabs-01","Usher Labs","https://www.usher.so","eee4ec38245dc931e47c01e1b33c7a9d7beb8b7830be974c3a097ac0820a5923","07891786a4ae846f970b65ffebc156df9680a796","tsn.node.usher.so:26656"
+"Matrixed.Link 01","Matrixed.Link","https://matrixedlink.io","e8541b9cb6edfcb50042a965dc4b73cb44d7207c85920dd5ffab9ea48c992aaf","256ab9894192c1466fb24e54259dcbb8c2a3221f","staging.eu.tsn.matrixed.link:26656"
