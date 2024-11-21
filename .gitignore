@@ -1,3 +1,7 @@
 # IDEs
 .idea
 .vscode
+.venv
+.env
+# directory to store local development files
+gitignore
