@@ -1,8 +1,8 @@
 {
-  "genesis_time": "2024-11-21T17:42:48.884377433Z",
-  "chain_id": "truflation-staging-v2",
+  "genesis_time": "2024-11-22T16:27:27.597837183Z",
+  "chain_id": "truflation-staging-2024-11-22",
   "initial_height": 1,
-  "app_hash": "/a3xy/EYe8BFuxJiabC7yOG4jphP6KOhr5tnF5ZGx4c=",
+  "app_hash": "IetSgiJOT254JDojLlfEDi+RFFrCF8ea/U96N2FOq+M=",
   "activations": null,
   "consensus_params": {
     "block": {
@@ -37,69 +37,9 @@
       "name": "truflation-node-01"
     },
     {
-      "pub_key": "0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae",
-      "power": 1,
-      "name": "truflation-node-02"
-    },
-    {
       "pub_key": "dc2240baa54023b06a3cfa95a5d0c8fccff6f5cd6b918e91bc9f4788cc3fc2cc",
       "power": 1,
       "name": "kwilteam0"
-    },
-    {
-      "pub_key": "efa792bf1c3d39820bd901a83756fa3a35942945c3d614a08017549792a842bb",
-      "power": 1,
-      "name": "Simply Staking"
-    },
-    {
-      "pub_key": "8f5b6ca7e5cf4c38373ababf6cea03383d610cf22e33283c55dce5a14dc80d0e",
-      "power": 1,
-      "name": "Allnodes.dev"
-    },
-    {
-      "pub_key": "f2a67c72c8c1ddd4a60541e725db9aaffbb567e328ea4e685ea67dc56fb3337b",
-      "power": 1,
-      "name": "Laguna-Node-01"
-    },
-    {
-      "pub_key": "b1e75c2305bc539b781950a8ef4218fb8830e47abc07ff1a4d2d870e809e1323",
-      "power": 1,
-      "name": "Knit-Node-01"
-    },
-    {
-      "pub_key": "faa49ddc6e145687e17dc51183c8cb4dfe7efc56ff17da8258135cf3a12a0945",
-      "power": 1,
-      "name": "Hydrox-Node-01"
-    },
-    {
-      "pub_key": "be177e0505be04b3d84980d36e717fa3c24878df5a242a136c3583d10cc83687",
-      "power": 1,
-      "name": "Trustednode-Node-01"
-    },
-    {
-      "pub_key": "59b398749cbeb982c565d7807ebd4b764e2042bc3d48cf9bf876a4333e2c404e",
-      "power": 1,
-      "name": "Link River"
-    },
-    {
-      "pub_key": "8096bc52f64624a8caef73d4817f1abff8832467075f5134ce28bec134567e4b",
-      "power": 1,
-      "name": "Linkpool"
-    },
-    {
-      "pub_key": "df817faabddf5ccdc883458c93d1b0fd3eaa4de3f6119c38ddc7b88ba0c83a04",
-      "power": 1,
-      "name": "TruLabs-Node-01"
-    },
-    {
-      "pub_key": "ebe48104aa52a2f4c361a3b1ae8ca46e5df957fa8c3492ffb1fd9653a7b26894",
-      "power": 1,
-      "name": "Stakin"
-    },
-    {
-      "pub_key": "f4e931c0029ad25486259a49d287d0dd4002c3f92f4961292e0321fc88080f12",
-      "power": 1,
-      "name": "Node Stake"
     },
     {
       "pub_key": "eee4ec38245dc931e47c01e1b33c7a9d7beb8b7830be974c3a097ac0820a5923",
