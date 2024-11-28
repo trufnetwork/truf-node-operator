@@ -12,8 +12,10 @@ Before you begin, ensure you have the following:
 2. **Docker**: Required for running the PostgreSQL image.
     - Install from [Docker's official website](https://docs.docker.com/get-docker/)
 
-3. **TSN Binaries**: Necessary for node deployment.
-    - Download from the [latest GitHub release](https://github.com/truflation/tsn-db/releases)
+3. **TN Binaries**: Necessary for node deployment.
+    | Version | darwin/amd64 | darwin/arm64 | linux/amd64 | linux/arm64 |
+    | --- | --- | --- | --- | --- |
+    | v1.2.0 | [Download](https://tsn-chain-migration.s3.us-east-2.amazonaws.com/binaries/tsn_1.2.0_darwin_amd64.tar.gz) | [Download](https://tsn-chain-migration.s3.us-east-2.amazonaws.com/binaries/tsn_1.2.0_darwin_arm64.tar.gz) | [Download](https://tsn-chain-migration.s3.us-east-2.amazonaws.com/binaries/tsn_1.2.0_linux_amd64.tar.gz) | [Download](https://tsn-chain-migration.s3.us-east-2.amazonaws.com/binaries/tsn_1.2.0_linux_arm64.tar.gz) |
 
 ## Setup Steps
 
