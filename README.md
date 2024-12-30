@@ -44,7 +44,7 @@ docker run -d -p 5432:5432 --name tsn-postgres \
 ```
 
 If you prefer a custom PostgreSQL setup, ensure it meets the requirements specified in the [configuration guide](https://docs.kwil.com/docs/daemon/running-postgres).
-
+To avoid security vulnerabilities, do not expose port 5432 publicly and make sure to set  passwords for your database
 ### 3. Deploy TSN Node
 
 #### 3.1. Install PSQL
