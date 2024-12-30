@@ -24,7 +24,7 @@ Before you begin, ensure you have the following:
 Use `kwil-admin` to create your initial configuration file. For example:
 
 ```bash
-kwil-admin setup peer  \
+kwil-admin setup init  \
   -g ./configs/network/staging/genesis.json \
   --root-dir ./my-peer-config/ \
   --chain.p2p.persistent-peers c6d2ea1e573d207cc31b7e17c771ab8ca2091b22@staging.node-1.tsn.truflation.com:26656,34599966ce4b67628f4cfa99fdca74ea2d039018@staging.node-2.tsn.truflation.com:26656
@@ -44,7 +44,7 @@ docker run -d -p 5432:5432 --name tsn-postgres \
 ```
 
 If you prefer a custom PostgreSQL setup, ensure it meets the requirements specified in the [configuration guide](https://docs.kwil.com/docs/daemon/running-postgres).
-
+To avoid security vulnerabilities, do not expose port 5432 publicly and make sure to set  passwords for your database
 ### 3. Deploy TSN Node
 
 #### 3.1. Install PSQL
