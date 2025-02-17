@@ -52,7 +52,7 @@ To avoid security vulnerabilities, do not expose port 5432 publicly and make sur
 To be able to Snapshot from the network, you need to have `psql` installed on your machine. You can install it by running:
 
 ```bash 
-sudo apt -y install postgresql
+sudo apt -y install postgresql-16
 ```
 
 #### 3.2. Run TSN Binaries
