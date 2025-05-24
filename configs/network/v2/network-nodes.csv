@@ -1,0 +1,3 @@
+node_name,owner_title,owner_website,node_pubkey,node_cometbft_id,p2p_rpc_endpoint
+"TRUF.NETWORK Node 01","TRUF.NETWORK","https://truf.network","","",""
+"TRUF.NETWORK Node 02","TRUF.NETWORK","https://truf.network","","",""
