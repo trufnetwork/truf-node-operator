@@ -2,15 +2,56 @@
 
 This guide outlines essential configurations for TRUF.NETWORK Node operators. We'll use `kwild` to generate the initial configuration file.
 
+## Node ID Format
+
+Node IDs in TRUF.NETWORK follow the format: `<public key>#<key type>@<IP address>:<port>`
+
+You can find your node's public key and key type by running:
+```bash
+kwild key info --key-file ./your-config-dir/nodekey.json
+```
+
+Note: Replace `./your-config-dir` with your actual node configuration directory path.
+
 ## Database Configuration
 
 Kwil provides a pre-configured PostgreSQL Docker image for quick setup:
 
 ```bash
-docker run -p 5432:5432 --name kwil-postgres -e "POSTGRES_HOST_AUTH_METHOD=trust" \
-    -v postgres_data:/var/lib/postgresql/data \
+docker run -p 5432:5432 --name tn-postgres -e "POSTGRES_HOST_AUTH_METHOD=trust" \
+    -v tn_data:/var/lib/postgresql/data \
     kwildb/postgres:latest
 ```
+
+### Installing pg_dump for State Sync
+
+State sync functionality requires the `pg_dump` utility for creating and restoring database snapshots. Here's how to install it:
+
+For Ubuntu/Debian:
+```bash
+sudo apt-get update
+sudo apt-get install postgresql-client-16
+```
+
+For CentOS/RHEL:
+```bash
+sudo yum install postgresql16
+```
+
+For macOS (using Homebrew):
+```bash
+brew install postgresql@16
+```
+
+Verify the installation:
+```bash
+pg_dump --version
+```
+
+This should show PostgreSQL version 16.x.x. The `pg_dump` utility is essential for:
+- Creating database snapshots for state sync
+- Restoring snapshots during node synchronization
+- Ensuring consistent state across the network
 
 ## Network Configuration
 
@@ -29,8 +70,9 @@ You should use this option to specify the genesis file provided in the `configs/
 Example usage:
 
 ```bash
-kwild setup init -g ./configs/network/v2/genesis.json \
-  --p2p.bootnodes "<revealed-soon>" \
+kwild setup init -genesis ./configs/network/v2/genesis.json \
+  --p2p.bootnodes "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1#ed25519@node-1.mainnet.truf.network:26656,0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae#ed25519@node-2.mainnet.truf.network:26656" \
+  --root ./my-node-config \
   [other options]
 ```
 
@@ -55,9 +97,10 @@ Important:
 
 Recommendations:
 - Set critical nodes as bootnodes for initial network connection. We recommend that you add our TN nodes as bootnodes.
-    For example: `--p2p.bootnodes "revealed-soon"`
+  For example: `--p2p.bootnodes "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1#ed25519@node-1.mainnet.truf.network:26656,0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae#ed25519@node-2.mainnet.truf.network:26656"`
 - Use the node list provided in `configs/network/v2/network-nodes.csv` as seeds for initial peer discovery
 - Configure trusted providers for state sync using `--statesync.trusted_providers` with node IDs from `configs/network/v2/network-nodes.csv`
+- When specifying node IDs for peer connections, always use the full format: `<public key>#<key type>@<IP address>:<port>`
 
 ### Custom Database Configuration
 
@@ -101,9 +144,9 @@ Remember to review and adjust these settings based on your specific requirements
 
 ```bash
 kwild setup init \
-    -g ./configs/network/v2/genesis.json \
-    --p2p.bootnodes "revealed-soon" \
-    --p2p.external_address mynode.mycompany.com:port \
+    -genesis ./configs/network/v2/genesis.json \
+    --p2p.bootnodes "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1#ed25519@node-1.mainnet.truf.network:26656,0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae#ed25519@node-2.mainnet.truf.network:26656" \
     --root ./tn-config \
-    --db.read_timeout 60s
 ```
+
+Note: In the example above, the bootnode is specified using the full node ID format (`<public key>#<key type>@<IP address>:<port>`).
