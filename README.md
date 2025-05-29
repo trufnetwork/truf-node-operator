@@ -2,6 +2,8 @@
 
 This guide will walk you through the process of setting up and running a TRUF.NETWORK (TN) node. By following these steps, you'll be able to deploy a node, optionally become a validator, and contribute to the TN v2 mainnet.
 
+> **New to server setup or need a quick start?** Check our [Quick Installation Guide](docs/installation-guide.md) with copy-paste commands for a fresh server instance.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
