@@ -17,7 +17,16 @@ Before you begin, ensure you have the following:
 
 ## Setup Steps
 
-### 1. Generate Initial Configuration
+### 1. Clone the Repository
+
+First, clone the TRUF.NETWORK node operator repository:
+
+```bash
+git clone https://github.com/trufnetwork/truf-node-operator.git
+cd truf-node-operator
+```
+
+### 2. Generate Initial Configuration
 
 Use `kwild` to create your initial configuration file:
 
@@ -30,7 +39,7 @@ kwild setup init \
 
 For detailed instructions on configuration options more relevant to a production setup, refer to our [Configuration Guide](docs/creating-config.md).
 
-### 2. Enable State Sync
+### 3. Enable State Sync
 
 Edit the `config.toml` file in your node configuration directory to enable state sync. The following example assumes you used `./my-node-config` as your root directory in the previous step. Adjust the path if you used a different directory:
 
@@ -42,7 +51,7 @@ sed -i 's/trusted_providers = \[\]/trusted_providers = ["0c830b69790eaa093158264
 
 This will configure your node to use state sync for faster synchronization with the network.
 
-### 3. Set Up PostgreSQL
+### 4. Set Up PostgreSQL
 
 For a quick setup, run Kwil's pre-configured PostgreSQL Docker image:
 
@@ -89,7 +98,7 @@ If you prefer a custom PostgreSQL setup, ensure it meets the requirements specif
 
 **Security Warning**: It is recommended to not expose port 5432 publicly in production environments.
 
-### 4. Deploy TN Node
+### 5. Deploy TN Node
 
 Run the kwild binary to deploy your node:
 
@@ -111,7 +120,7 @@ Ensure your firewall allows incoming connections on:
 
 The `--statesync.enable` and `--statesync.trusted_providers` flags are optional and will help your node sync faster with the network using snapshots provided by the RPC servers.
 
-### 5. Verify Node Synchronization
+### 6. Verify Node Synchronization
 
 Before proceeding to become a validator, ensure your node is fully synced with the network:
 
@@ -121,7 +130,7 @@ kwild admin status
 
 Look for the `syncing: false` in the output, and check that your `best_block_height` is close to the current network height.
 
-### 6. Become a Validator (Optional)
+### 7. Become a Validator (Optional)
 
 To upgrade your node to a validator:
 
@@ -160,7 +169,7 @@ This will show your node's public key and key type, which you'll need for valida
 
 You can always reach out to the community for help with the validator process.
 
-### 7. Submit Your Node to Available Node List (Optional)
+### 8. Submit Your Node to Available Node List (Optional)
 
 To help others discover your node:
 
