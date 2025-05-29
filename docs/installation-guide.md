@@ -1,6 +1,11 @@
 # TRUF.NETWORK Quick Installation Guide
 
-This guide provides step-by-step instructions for setting up a TRUF.NETWORK node on a fresh Ubuntu installation.
+This guide provides step-by-step instructions for setting up a TRUF.NETWORK node on a fresh server instance. While the commands are written for Ubuntu, they can be adapted for other Linux distributions with minimal changes.
+
+> **Note**: This guide uses Ubuntu-specific package managers (`apt-get`) and paths. If you're using a different Linux distribution:
+> - Replace `apt-get` with your distribution's package manager (e.g., `yum` for RHEL/CentOS, `dnf` for Fedora)
+> - Adjust package names if they differ in your distribution
+> - The core concepts and steps remain the same
 
 ## Prerequisites Installation
 
