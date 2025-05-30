@@ -17,7 +17,6 @@ This repository contains:
    - `v2/network-nodes.csv`: List of available nodes for peer discovery
 
 2. **Documentation**: Detailed guides in the `docs/` directory:
-   - `installation-guide.md`: Quick start guide with copy-paste commands
    - `creating-config.md`: Detailed configuration options for production setups
 
 ## Getting Help
