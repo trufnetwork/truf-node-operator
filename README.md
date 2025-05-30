@@ -6,7 +6,7 @@ This repository contains configuration files and utilities for running a TRUF.NE
 
 For detailed instructions on setting up and running a TRUF.NETWORK node, please refer to our official documentation:
 
-- [Node Operator Guide](https://trufnetwork.github.io/node-operator-guide) - Comprehensive guide to setting up and running a TN node
+- [Node Operator Guide](https://docs.truf.network/node-operator-guide) - Comprehensive guide to setting up and running a TN node
 
 ## Repository Contents
 
