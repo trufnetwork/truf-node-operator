@@ -1,19 +1,15 @@
 {
   "chain_id": "tn-v2",
-  "initial_height": 0,
+  "initial_height": 148618,
   "db_owner": "0xEC36224A679218Ae28FCeCe8d3c68595B87Dd832",
   "validators": [
     {
       "pubkey": "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1",
       "type": "ed25519",
       "power": 1
-    },
-    {
-      "pubkey": "0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae",
-      "type": "ed25519",
-      "power": 1
     }
   ],
+  "state_hash": "ca2d33954aac9a05cb880cf7a885dfe7dc8d5b368897e80ed8025ab73e342ced",
   "migration": {
     "start_height": 0,
     "end_height": 0
