@@ -1,3 +1,4 @@
 node_name,owner_title,owner_website,node_id,ip_address
 "TRUF.NETWORK Node 01","TRUF.NETWORK","https://truf.network","4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1#ed25519","node-1.mainnet.truf.network:26656"
 "TRUF.NETWORK Node 02","TRUF.NETWORK","https://truf.network","0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae#ed25519","node-2.mainnet.truf.network:26656"
+"Truflation Node 01","Truflation","https://truflation.com","03f3b95fa4ebebdb251910ec83b8b119b2d66a33f8c2e091e040637211f9ebb3eb#secp256k1,"tn-node.truflation.com:8484"
