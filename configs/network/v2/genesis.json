@@ -1,25 +1,25 @@
 {
-  "chain_id": "tn-v2",
-  "initial_height": 148618,
-  "db_owner": "0xEC36224A679218Ae28FCeCe8d3c68595B87Dd832",
-  "validators": [
-    {
-      "pubkey": "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1",
+    "chain_id": "tn-v2.1",
+    "initial_height": 195391,
+    "db_owner": "0xEC36224A679218Ae28FCeCe8d3c68595B87Dd832",
+    "validators": [
+      {
+        "pubkey": "0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae",
+        "type": "ed25519",
+        "power": 1
+      }
+    ],
+    "state_hash": "e4c6e9961abc32c3c0ad0c6789d39dbba08d6641223113cadf65773a0b247005",
+    "migration": {
+      "start_height": 0,
+      "end_height": 0
+    },
+    "leader": {
       "type": "ed25519",
-      "power": 1
-    }
-  ],
-  "state_hash": "ca2d33954aac9a05cb880cf7a885dfe7dc8d5b368897e80ed8025ab73e342ced",
-  "migration": {
-    "start_height": 0,
-    "end_height": 0
-  },
-  "leader": {
-    "type": "ed25519",
-    "key": "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1"
-  },
-  "max_block_size": 6291456,
-  "join_expiry": "168h0m0s",
-  "disabled_gas_costs": true,
-  "max_votes_per_tx": 200
-}
+      "key": "0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae"
+    },
+    "max_block_size": 6291456,
+    "join_expiry": "168h0m0s",
+    "disabled_gas_costs": true,
+    "max_votes_per_tx": 200
+  }
