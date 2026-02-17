@@ -1,0 +1,3 @@
+node_name,owner_title,owner_website,node_id,ip_address
+"Testnet Leader","TRUF.NETWORK","https://truf.network","0368d4f915451a5c58782b804c49cc784bfcd2866e8f6c21799e3577f2441a5799#secp256k1","3.141.77.16:6600"
+"Testnet Sentry","TRUF.NETWORK","https://truf.network","0237d8c37fe15c4837027701efad2db3cf2705abbf8a6cf7c77c4ea5f895a436eb#secp256k1","13.58.112.159:6600"
