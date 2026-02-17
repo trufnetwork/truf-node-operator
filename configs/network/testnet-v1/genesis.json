@@ -1,0 +1,24 @@
+{
+  "chain_id": "testnet-v1",
+  "initial_height": 0,
+  "db_owner": "0x231ea6C42aD77036237EF1C6398b76D0afc7Fd9e",
+  "validators": [
+    {
+      "pubkey": "0368d4f915451a5c58782b804c49cc784bfcd2866e8f6c21799e3577f2441a5799",
+      "type": "secp256k1",
+      "power": 1
+    }
+  ],
+  "migration": {
+    "start_height": 0,
+    "end_height": 0
+  },
+  "leader": {
+    "type": "secp256k1",
+    "key": "0368d4f915451a5c58782b804c49cc784bfcd2866e8f6c21799e3577f2441a5799"
+  },
+  "max_block_size": 6291456,
+  "join_expiry": "168h0m0s",
+  "disabled_gas_costs": true,
+  "max_votes_per_tx": 200
+}
