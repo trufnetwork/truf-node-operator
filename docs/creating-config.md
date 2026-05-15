@@ -99,7 +99,8 @@ Recommendations:
 - Set critical nodes as bootnodes for initial network connection. We recommend that you add our TN nodes as bootnodes.
   For example: `--p2p.bootnodes "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1#ed25519@node-1.mainnet.truf.network:26656,0c830b69790eaa09315826403c2008edc65b5c7132be9d4b7b4da825c2a166ae#ed25519@node-2.mainnet.truf.network:26656"`
 - Use the node list provided in `configs/network/v2/network-nodes.csv` as seeds for initial peer discovery
-- Configure trusted providers for state sync using `--statesync.trusted_providers` with node IDs from `configs/network/v2/network-nodes.csv`
+- Configure trusted providers for state sync using `--statesync.trusted_providers`. Currently, `node-1.mainnet.truf.network` is the canonical snapshot provider; other nodes do not generate snapshots. Example:
+  `--statesync.trusted_providers "4e0b5c952be7f26698dc1898ff3696ac30e990f25891aeaf88b0285eab4663e1#ed25519@node-1.mainnet.truf.network:26656"`
 - When specifying node IDs for peer connections, always use the full format: `<public key>#<key type>@<IP address>:<port>`
 
 ### Custom Database Configuration
